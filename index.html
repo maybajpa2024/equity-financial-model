@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Equity Investment Financial Model</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #2c3e50, #34495e);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            font-weight: 300;
+        }
+        
+        .header p {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+        
+        .main-content {
+            padding: 30px;
+        }
+        
+        .section {
+            background: white;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        
+        .section-header {
+            background: linear-gradient(135deg, #3498db, #2980b9);
+            color: white;
+            padding: 20px 30px;
+            font-size: 1.3em;
+            font-weight: 500;
+        }
+        
+        .section-content {
+            padding: 30px;
+        }
+        
+        .input-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 25px;
+        }
+        
+        .input-group {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .input-group label {
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #2c3e50;
+            font-size: 0.95em;
+        }
+        
+        .input-group input, .input-group select {
+            padding: 12px 15px;
+            border: 2px solid #e0e6ed;
+            border-radius: 8px;
+            font-size: 1em;
+            transition: all 0.3s ease;
+            background: #fafbfc;
+        }
+        
+        .input-group input:focus, .input-group select:focus {
+            outline: none;
+            border-color: #3498db;
+            background: white;
+            box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+        }
+        
+        .calculate-btn {
+            background: linear-gradient(135deg, #27ae60, #2ecc71);
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            border-radius: 25px;
+            font-size: 1.1em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin: 20px 0;
+        }
+        
+        .calculate-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(46, 204, 113, 0.3);
+        }
+        
+        .results-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .results-table th {
+            background: linear-gradient(135deg, #34495e, #2c3e50);
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-weight: 600;
+        }
+        
+        .results-table td {
+            padding: 12px 15px;
+            text-align: center;
+            border-bottom: 1px solid #ecf0f1;
+        }
+        
+        .results-table tbody tr:hover {
+            background: #f8f9fa;
+        }
+        
+        .metric-label {
+            font-weight: 600;
+            text-align: left !important;
+            background: #ecf0f1;
+        }
+        
+        .positive { color: #27ae60; font-weight: 600; }
+        .negative { color: #e74c3c; font-weight: 600; }
+        
+        .guidance-section {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        .exit-multiples {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .multiple-card {
+            background: linear-gradient(135deg, #8e44ad, #9b59b6);
+            color: white;
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(142, 68, 173, 0.3);
+        }
+        
+        .multiple-card h3 {
+            font-size: 0.9em;
+            margin-bottom: 8px;
+            opacity: 0.9;
+        }
+        
+        .multiple-card .value {
+            font-size: 1.8em;
+            font-weight: 700;
+        }
+        
+        .assumptions {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 15px 0;
+        }
+        
+        .assumptions h4 {
+            color: #856404;
+            margin-bottom: 10px;
+        }
+        
+        .assumptions ul {
+            color: #856404;
+            margin-left: 20px;
+        }
+
+        .footer {
+            background: #2c3e50;
+            color: white;
+            padding: 20px 30px;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .footer a {
+            color: #3498db;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📊 Equity Investment Financial Model</h1>
+            <p>Professional 3-Year Financial Projection & Valuation Tool</p>
+        </div>
+        
+        <div class="main-content">
+            <!-- Base Data Input Section -->
+            <div class="section">
+                <div class="section-header">
+                    📈 Base Historical Data (FY25 Actuals)
+                </div>
+                <div class="section-content">
+                    <div class="input-grid">
+                        <div class="input-group">
+                            <label>Company Name</label>
+                            <input type="text" id="companyName" placeholder="Enter company name">
+                        </div>
+                        <div class="input-group">
+                            <label>Current Share Price (₹)</label>
+                            <input type="number" id="currentPrice" placeholder="Current market price">
+                        </div>
+                        <div class="input-group">
+                            <label>Shares Outstanding (Cr)</label>
+                            <input type="number" id="sharesOutstanding" placeholder="Total shares in crores">
+                        </div>
+                        <div class="input-group">
+                            <label>FY25 Revenue (₹ Cr)</label>
+                            <input type="number" id="fy25Revenue" placeholder="Latest reported revenue">
+                        </div>
+                        <div class="input-group">
+                            <label>FY25 EBITDA (₹ Cr)</label>
+                            <input type="number" id="fy25Ebitda" placeholder="Latest EBITDA">
+                        </div>
+                        <div class="input-group">
+                            <label>FY25 EBIT (₹ Cr)</label>
+                            <input type="number" id="fy25Ebit" placeholder="Latest EBIT">
+                        </div>
+                        <div class="input-group">
+                            <label>FY25 PAT (₹ Cr)</label>
+                            <input type="number" id="fy25Pat" placeholder="Latest PAT">
+                        </div>
+                        <div class="input-group">
+                            <label>FY25 EPS (₹)</label>
+                            <input type="number" id="fy25Eps" placeholder="Latest EPS">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Growth Guidance Section -->
+            <div class="section">
+                <div class="section-header">
+                    🚀 Management Guidance & Growth Assumptions
+                </div>
+                <div class="section-content">
+                    <div class="input-grid">
+                        <div class="input-group">
+                            <label>FY26 Revenue Growth (%)</label>
+                            <input type="number" id="fy26RevenueGrowth" placeholder="Expected revenue growth">
+                        </div>
+                        <div class="input-group">
+                            <label>FY27 Revenue Growth (%)</label>
+                            <input type="number" id="fy27RevenueGrowth" placeholder="Expected revenue growth">
+                        </div>
+                        <div class="input-group">
+                            <label>FY28 Revenue Growth (%)</label>
+                            <input type="number" id="fy28RevenueGrowth" placeholder="Expected revenue growth">
+                        </div>
+                        <div class="input-group">
+                            <label>EBITDA Margin Trajectory</label>
+                            <select id="marginTrend">
+                                <option value="stable">Stable Margins</option>
+                                <option value="expanding">Expanding Margins</option>
+                                <option value="contracting">Contracting Margins</option>
+                            </select>
+                        </div>
+                        <div class="input-group">
+                            <label>Margin Change per Year (%)</label>
+                            <input type="number" id="marginChange" placeholder="Annual margin change" step="0.1">
+                        </div>
+                        <div class="input-group">
+                            <label>Tax Rate (%)</label>
+                            <input type="number" id="taxRate" placeholder="Effective tax rate" value="25">
+                        </div>
+                    </div>
+                    
+                    <div class="assumptions">
+                        <h4>Key Assumptions:</h4>
+                        <ul>
+                            <li>Depreciation assumed as difference between EBITDA and EBIT</li>
+                            <li>Interest expenses calculated based on historical EBIT to PAT conversion</li>
+                            <li>Share count assumed constant (no dilution/buybacks)</li>
+                            <li>Tax rate can be adjusted based on company guidance</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Valuation Parameters -->
+            <div class="section">
+                <div class="section-header">
+                    💰 Valuation Parameters
+                </div>
+                <div class="section-content">
+                    <div class="input-grid">
+                        <div class="input-group">
+                            <label>Target P/E Multiple</label>
+                            <input type="number" id="targetPE" placeholder="Target P/E for exit valuation" step="0.1">
+                        </div>
+                        <div class="input-group">
+                            <label>Target EV/EBITDA Multiple</label>
+                            <input type="number" id="targetEVEBITDA" placeholder="Target EV/EBITDA multiple" step="0.1">
+                        </div>
+                        <div class="input-group">
+                            <label>Net Debt (₹ Cr)</label>
+                            <input type="number" id="netDebt" placeholder="Current net debt position" value="0">
+                        </div>
+                        <div class="input-group">
+                            <label>Valuation Year</label>
+                            <select id="valuationYear">
+                                <option value="fy26">FY26</option>
+                                <option value="fy27" selected>FY27</option>
+                                <option value="fy28">FY28</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <button class="calculate-btn" onclick="calculateProjections()">
+                        🧮 Calculate Financial Projections
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Results Section -->
+            <div class="section" id="resultsSection" style="display: none;">
+                <div class="section-header">
+                    📊 Financial Projections & Results
+                </div>
+                <div class="section-content">
+                    <table class="results-table" id="resultsTable">
+                        <!-- Results will be populated here -->
+                    </table>
+                    
+                    <div class="exit-multiples" id="exitMultiples">
+                        <!-- Exit multiples will be populated here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>Built with ❤️ for the investing community | 
+            <a href="https://github.com/maybajpa2024/equity-financial-model" target="_blank">GitHub</a> | 
+            <a href="https://twitter.com/maybajpa2024" target="_blank">Twitter</a></p>
+            <p style="margin-top: 10px; font-size: 0.9em; opacity: 0.8;">
+                ⚠️ For educational purposes only. Not investment advice. Always do your own research.
+            </p>
+        </div>
+    </div>
+
+    <script>
+        function calculateProjections() {
+            // Get all input values
+            const inputs = {
+                companyName: document.getElementById('companyName').value || 'Company',
+                currentPrice: parseFloat(document.getElementById('currentPrice').value) || 0,
+                sharesOutstanding: parseFloat(document.getElementById('sharesOutstanding').value) || 0,
+                fy25Revenue: parseFloat(document.getElementById('fy25Revenue').value) || 0,
+                fy25Ebitda: parseFloat(document.getElementById('fy25Ebitda').value) || 0,
+                fy25Ebit: parseFloat(document.getElementById('fy25Ebit').value) || 0,
+                fy25Pat: parseFloat(document.getElementById('fy25Pat').value) || 0,
+                fy25Eps: parseFloat(document.getElementById('fy25Eps').value) || 0,
+                fy26RevenueGrowth: parseFloat(document.getElementById('fy26RevenueGrowth').value) || 0,
+                fy27RevenueGrowth: parseFloat(document.getElementById('fy27RevenueGrowth').value) || 0,
+                fy28RevenueGrowth: parseFloat(document.getElementById('fy28RevenueGrowth').value) || 0,
+                marginTrend: document.getElementById('marginTrend').value,
+                marginChange: parseFloat(document.getElementById('marginChange').value) || 0,
+                taxRate: parseFloat(document.getElementById('taxRate').value) || 25,
+                targetPE: parseFloat(document.getElementById('targetPE').value) || 0,
+                targetEVEBITDA: parseFloat(document.getElementById('targetEVEBITDA').value) || 0,
+                netDebt: parseFloat(document.getElementById('netDebt').value) || 0,
+                valuationYear: document.getElementById('valuationYear').value
+            };
+            
+            // Validate inputs
+            if (inputs.fy25Revenue === 0 || inputs.sharesOutstanding === 0) {
+                alert('Please enter at least FY25 Revenue and Shares Outstanding');
+                return;
+            }
+            
+            // Calculate base margins
+            const baseEbitdaMargin = (inputs.fy25Ebitda / inputs.fy25Revenue) * 100;
+            const baseEbitMargin = (inputs.fy25Ebit / inputs.fy25Revenue) * 100;
+            const baseNetMargin = (inputs.fy25Pat / inputs.fy25Revenue) * 100;
+            
+            // Calculate projections
+            const projections = {};
+            
+            // FY26 Projections
+            projections.fy26 = calculateYearProjection(inputs, 'fy26', inputs.fy25Revenue, baseEbitdaMargin, baseEbitMargin, baseNetMargin, 1);
+            
+            // FY27 Projections
+            projections.fy27 = calculateYearProjection(inputs, 'fy27', projections.fy26.revenue, projections.fy26.ebitdaMargin, projections.fy26.ebitMargin, projections.fy26.netMargin, 2);
+            
+            // FY28 Projections
+            projections.fy28 = calculateYearProjection(inputs, 'fy28', projections.fy27.revenue, projections.fy27.ebitdaMargin, projections.fy27.ebitMargin, projections.fy27.netMargin, 3);
+            
+            // Display results
+            displayResults(inputs, projections);
+        }
+        
+        function calculateYearProjection(inputs, year, prevRevenue, prevEbitdaMargin, prevEbitMargin, prevNetMargin, yearNum) {
+            const growthRate = inputs[year + 'RevenueGrowth'] / 100;
+            const revenue = prevRevenue * (1 + growthRate);
+            
+            // Calculate margin changes
+            let marginAdjustment = 0;
+            if (inputs.marginTrend === 'expanding') {
+                marginAdjustment = inputs.marginChange;
+            } else if (inputs.marginTrend === 'contracting') {
+                marginAdjustment = -inputs.marginChange;
+            }
+            
+            const ebitdaMargin = prevEbitdaMargin + marginAdjustment;
+            const ebitMargin = prevEbitMargin + marginAdjustment * 0.8; // Assuming depreciation grows slower
+            const netMargin = prevNetMargin + marginAdjustment * 0.6; // Tax impact
+            
+            const ebitda = revenue * (ebitdaMargin / 100);
+            const ebit = revenue * (ebitMargin / 100);
+            
+            // Calculate PAT (simplified approach)
+            const pat = revenue * (netMargin / 100);
+            const eps = pat / inputs.sharesOutstanding;
+            
+            return {
+                revenue: revenue,
+                ebitda: ebitda,
+                ebit: ebit,
+                pat: pat,
+                eps: eps,
+                ebitdaMargin: ebitdaMargin,
+                ebitMargin: ebitMargin,
+                netMargin: netMargin,
+                revenueGrowth: growthRate * 100
+            };
+        }
+        
+        function displayResults(inputs, projections) {
+            const resultsSection = document.getElementById('resultsSection');
+            const resultsTable = document.getElementById('resultsTable');
+            const exitMultiples = document.getElementById('exitMultiples');
+            
+            // Create results table
+            let tableHTML = `
+                <thead>
+                    <tr>
+                        <th>Metrics</th>
+                        <th>FY25 (Actual)</th>
+                        <th>FY26 (Proj)</th>
+                        <th>FY27 (Proj)</th>
+                        <th>FY28 (Proj)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="metric-label">Revenue (₹ Cr)</td>
+                        <td>${inputs.fy25Revenue.toFixed(1)}</td>
+                        <td>${projections.fy26.revenue.toFixed(1)}</td>
+                        <td>${projections.fy27.revenue.toFixed(1)}</td>
+                        <td>${projections.fy28.revenue.toFixed(1)}</td>
+                    </tr>
+                    <tr>
+                        <td class="metric-label">Revenue Growth (%)</td>
+                        <td>-</td>
+                        <td class="${projections.fy26.revenueGrowth >= 0 ? 'positive' : 'negative'}">${projections.fy26.revenueGrowth.toFixed(1)}%</td>
+                        <td class="${projections.fy27.revenueGrowth >= 0 ? 'positive' : 'negative'}">${projections.fy27.revenueGrowth.toFixed(1)}%</td>
+                        <td class="${projections.fy28.revenueGrowth >= 0 ? 'positive' : 'negative'}">${projections.fy28.revenueGrowth.toFixed(1)}%</td>
+                    </tr>
+                    <tr>
+                        <td class="metric-label">EBITDA (₹ Cr)</td>
+                        <td>${inputs.fy25Ebitda.toFixed(1)}</td>
+                        <td>${projections.fy26.ebitda.toFixed(1)}</td>
+                        <td>${projections.fy27.ebitda.toFixed(1)}</td>
+                        <td>${projections.fy28.ebitda.toFixed(1)}</td>
+                    </tr>
+                    <tr>
+                        <td class="metric-label">EBITDA Margin (%)</td>
+                        <td>${((inputs.fy25Ebitda/inputs.fy25Revenue)*100).toFixed(1)}%</td>
+                        <td>${projections.fy26.ebitdaMargin.toFixed(1)}%</td>
+                        <td>${projections.fy27.ebitdaMargin.toFixed(1)}%</td>
+                        <td>${projections.fy28.ebitdaMargin.toFixed(1)}%</td>
+                    </tr>
+                    <tr>
+                        <td class="metric-label">EBIT (₹ Cr)</td>
+                        <td>${inputs.fy25Ebit.toFixed(1)}</td>
+                        <td>${projections.fy26.ebit.toFixed(1)}</td>
+                        <td>${projections.fy27.ebit.toFixed(1)}</td>
+                        <td>${projections.fy28.ebit.toFixed(1)}</td>
+                    </tr>
+                    <tr>
+                        <td class="metric-label">PAT (₹ Cr)</td>
+                        <td>${inputs.fy25Pat.toFixed(1)}</td>
+                        <td>${projections.fy26.pat.toFixed(1)}</td>
+                        <td>${projections.fy27.pat.toFixed(1)}</td>
+                        <td>${projections.fy28.pat.toFixed(1)}</td>
+                    </tr>
+                    <tr>
+                        <td class="metric-label">EPS (₹)</td>
+                        <td>${inputs.fy25Eps.toFixed(2)}</td>
+                        <td>${projections.fy26.eps.toFixed(2)}</td>
+                        <td>${projections.fy27.eps.toFixed(2)}</td>
+                        <td>${projections.fy28.eps.toFixed(2)}</td>
+                    </tr>
+                </tbody>
+            `;
+            
+            resultsTable.innerHTML = tableHTML;
+            
+            // Calculate exit multiples
+            const valuationData = projections[inputs.valuationYear];
+            let exitMultiplesHTML = '';
+            
+            if (inputs.targetPE > 0) {
+                const targetPrice = valuationData.eps * inputs.targetPE;
+                const upside = ((targetPrice - inputs.currentPrice) / inputs.currentPrice) * 100;
+                exitMultiplesHTML += `
+                    <div class="multiple-card">
+                        <h3>P/E Based Target</h3>
+                        <div class="value">₹${targetPrice.toFixed(0)}</div>
+                        <p>${upside >= 0 ? '+' : ''}${upside.toFixed(1)}% upside</p>
+                    </div>
+                `;
+            }
+            
+            if (inputs.targetEVEBITDA > 0) {
+                const enterpriseValue = valuationData.ebitda * inputs.targetEVEBITDA;
+                const equityValue = enterpriseValue - inputs.netDebt;
+                const targetPrice = equityValue / inputs.sharesOutstanding;
+                const upside = ((targetPrice - inputs.currentPrice) / inputs.currentPrice) * 100;
+                exitMultiplesHTML += `
+                    <div class="multiple-card">
+                        <h3>EV/EBITDA Based Target</h3>
+                        <div class="value">₹${targetPrice.toFixed(0)}</div>
+                        <p>${upside >= 0 ? '+' : ''}${upside.toFixed(1)}% upside</p>
+                    </div>
+                `;
+            }
+            
+            // Add current valuation metrics
+            if (inputs.currentPrice > 0) {
+                const currentPE = inputs.currentPrice / inputs.fy25Eps;
+                const currentMarketCap = inputs.currentPrice * inputs.sharesOutstanding;
+                const currentEV = currentMarketCap + inputs.netDebt;
+                const currentEVEBITDA = currentEV / inputs.fy25Ebitda;
+                
+                exitMultiplesHTML += `
+                    <div class="multiple-card">
+                        <h3>Current P/E</h3>
+                        <div class="value">${currentPE.toFixed(1)}x</div>
+                        <p>Based on FY25 EPS</p>
+                    </div>
+                    <div class="multiple-card">
+                        <h3>Current EV/EBITDA</h3>
+                        <div class="value">${currentEVEBITDA.toFixed(1)}x</div>
+                        <p>Based on FY25 EBITDA</p>
+                    </div>
+                `;
+            }
+            
+            exitMultiples.innerHTML = exitMultiplesHTML;
+            resultsSection.style.display = 'block';
+            resultsSection.scrollIntoView({ behavior: 'smooth' });
+        }
+        
+        // Add some sample data for demonstration
+        function loadSampleData() {
+            document.getElementById('companyName').value = 'APAR Industries';
+            document.getElementById('currentPrice').value = '6500';
+            document.getElementById('sharesOutstanding').value = '4.01';
+            document.getElementById('fy25Revenue').value = '18581';
+            document.getElementById('fy25Ebitda').value = '1679';
+            document.getElementById('fy25Ebit').value = '1547';
+            document.getElementById('fy25Pat').value = '821';
+            document.getElementById('fy25Eps').value = '204.46';
+            document.getElementById('fy26RevenueGrowth').value = '15';
+            document.getElementById('fy27RevenueGrowth').value = '19';
+            document.getElementById('fy28RevenueGrowth').value = '23';
+            document.getElementById('marginTrend').value = 'expanding';
+            document.getElementById('marginChange').value = '0.4';
+            document.getElementById('targetPE').value = '28';
+            document.getElementById('targetEVEBITDA').value = '15';
+            document.getElementById('netDebt').value = '650';
+        }
+        
+        // Add sample data button
+        window.addEventListener('load', function() {
+            const header = document.querySelector('.header');
+            const sampleBtn = document.createElement('button');
+            sampleBtn.textContent = 'Load APAR Example';
+            sampleBtn.style.cssText = 'background: rgba(255,255,255,0.2); color: white; border: 1px solid white; padding: 8px 16px; border-radius: 20px; margin-top: 10px; cursor: pointer; margin-right: 10px;';
+            sampleBtn.onclick = loadSampleData;
+            
+            const githubBtn = document.createElement('a');
+            githubBtn.href = 'https://github.com/maybajpa2024/equity-financial-model';
+            githubBtn.target = '_blank';
+            githubBtn.textContent = '⭐ Star on GitHub';
+            githubBtn.style.cssText = 'background: rgba(255,255,255,0.2); color: white; border: 1px solid white; padding: 8px 16px; border-radius: 20px; text-decoration: none; display: inline-block; margin-top: 10px;';
+            
+            header.appendChild(document.createElement('br'));
+            header.appendChild(sampleBtn);
+            header.appendChild(githubBtn);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,308 @@
+# 📖 Comprehensive User Guide
+
+Welcome to the Equity Financial Model Tool! This guide will walk you through every feature and help you build professional investment models.
+
+## 🎯 Overview
+
+This tool helps you create 3-year financial projections and calculate exit valuations for equity investments. It's designed for:
+- Equity research analysts
+- Individual investors
+- Finance students
+- Portfolio managers
+
+## 🚀 Getting Started
+
+### Step 1: Access the Tool
+Visit: [https://maybajpa2024.github.io/equity-financial-model](https://maybajpa2024.github.io/equity-financial-model)
+
+### Step 2: Prepare Your Data
+Before starting, gather:
+- **Latest Financial Data** (Annual report/quarterly results)
+- **Management Guidance** (Earnings calls/investor presentations)
+- **Industry Multiples** (Peer analysis/research reports)
+
+## 📊 Section-by-Section Guide
+
+### Section 1: Base Historical Data (FY25 Actuals)
+
+This section captures the company's most recent financial performance.
+
+#### Required Inputs:
+
+**Company Information:**
+- **Company Name**: Enter the full company name for reference
+- **Current Share Price (₹)**: Latest trading price
+- **Shares Outstanding (Cr)**: Total shares in circulation
+
+**Financial Metrics:**
+- **FY25 Revenue (₹ Cr)**: Total revenue from latest annual report
+- **FY25 EBITDA (₹ Cr)**: Earnings before interest, tax, depreciation & amortization
+- **FY25 EBIT (₹ Cr)**: Earnings before interest and tax
+- **FY25 PAT (₹ Cr)**: Profit after tax (net income)
+- **FY25 EPS (₹)**: Earnings per share
+
+#### Data Sources:
+- **Annual Reports**: Company website → Investor Relations
+- **Quarterly Results**: Stock exchange filings
+- **Financial Websites**: Screener.in, MoneyControl, BSE/NSE
+- **Bloomberg/Reuters**: Professional terminals
+
+#### Pro Tips:
+- Use **consolidated figures** for diversified companies
+- Ensure **consistency** across all metrics
+- **Verify** share count matches market cap calculation
+- Use **audited figures** rather than estimates
+
+### Section 2: Management Guidance & Growth Assumptions
+
+This section projects future performance based on management guidance and your analysis.
+
+#### Growth Inputs:
+
+**Revenue Growth Rates:**
+- **FY26 Revenue Growth (%)**: Year 1 projection
+- **FY27 Revenue Growth (%)**: Year 2 projection  
+- **FY28 Revenue Growth (%)**: Year 3 projection
+
+**Margin Trajectory:**
+- **EBITDA Margin Trajectory**: 
+  - *Stable*: Margins remain constant
+  - *Expanding*: Margins improve over time
+  - *Contracting*: Margins compress
+- **Margin Change per Year (%)**: Annual margin adjustment
+- **Tax Rate (%)**: Effective tax rate assumption
+
+#### Sourcing Growth Assumptions:
+
+**From Earnings Calls:**
+- Management revenue guidance
+- Margin expansion/contraction commentary
+- CAPEX impact on profitability
+- Market outlook statements
+
+**From Industry Analysis:**
+- Peer company growth rates
+- Sector tailwinds/headwinds
+- Market size expansion
+- Competitive positioning
+
+**Conservative Approach:**
+- Use lower end of guidance ranges
+- Consider execution risks
+- Factor in economic cycles
+- Stress test assumptions
+
+### Section 3: Valuation Parameters
+
+This section determines the exit valuation methodology.
+
+#### Multiple Selection:
+
+**Target P/E Multiple:**
+- **Source**: Peer company trading multiples
+- **Considerations**: Growth rate, quality, market position
+- **Typical Ranges**:
+  - Value stocks: 8-15x
+  - Quality growth: 20-30x
+  - High growth: 30-50x+
+
+**Target EV/EBITDA Multiple:**
+- **Source**: Industry comps, historical averages
+- **Benefits**: Capital structure neutral
+- **Typical Ranges**:
+  - Mature industries: 6-12x
+  - Growth sectors: 12-20x
+  - Premium businesses: 15-25x+
+
+**Other Parameters:**
+- **Net Debt (₹ Cr)**: Current debt minus cash
+- **Valuation Year**: When to apply exit multiple
+  - FY26: Near-term conservative
+  - FY27: Balanced approach
+  - FY28: Long-term optimistic
+
+## 🔍 Reading the Results
+
+### Financial Projections Table
+
+The results table shows year-by-year progression:
+
+**Revenue Metrics:**
+- **Revenue Growth (%)**: Year-over-year change
+- **Absolute Revenue**: Total revenue in each year
+
+**Profitability Analysis:**
+- **EBITDA/EBIT/PAT**: Profit progression
+- **Margin Evolution**: How margins change over time
+- **EPS Growth**: Per-share earnings trajectory
+
+### Exit Valuation Cards
+
+**P/E Based Target:**
+- **Calculation**: Target year EPS × Target P/E
+- **Upside/Downside**: Percentage return potential
+- **Use Case**: Earnings-focused valuation
+
+**EV/EBITDA Based Target:**
+- **Calculation**: (Target EBITDA × EV/EBITDA) - Net Debt ÷ Shares
+- **Upside/Downside**: Alternative return scenario
+- **Use Case**: Enterprise value approach
+
+**Current Metrics:**
+- **Current P/E**: Present valuation multiple
+- **Current EV/EBITDA**: Present enterprise multiple
+- **Comparison**: Current vs target multiples
+
+## ⚡ Advanced Features
+
+### Margin Trajectory Modeling
+
+**Expanding Margins Scenario:**
+- Operational leverage
+- Cost optimization
+- Premium product mix
+- Scale economies
+
+**Contracting Margins Scenario:**
+- Competitive pressure
+- Input cost inflation
+- Market maturation
+- Regulatory changes
+
+**Stable Margins Scenario:**
+- Mature business model
+- Balanced competitive dynamics
+- Steady cost structure
+
+### Sensitivity Analysis
+
+**Manual Stress Testing:**
+1. **Conservative Case**: Lower growth, stable margins
+2. **Base Case**: Management guidance
+3. **Optimistic Case**: Upper end of ranges
+
+**Key Variables to Test:**
+- Revenue growth ±5%
+- Margin change ±1%
+- Exit multiple ±20%
+
+### Model Validation
+
+**Sanity Checks:**
+- Revenue growth vs industry benchmarks
+- Margin progression vs peers
+- Valuation multiples vs sector averages
+- Historical comparison
+
+**Red Flags:**
+- Unrealistic growth assumptions
+- Margin expansion without drivers
+- Valuation multiples too high/low
+- Inconsistent projections
+
+## 🎓 Best Practices
+
+### Data Quality
+- **Verify Sources**: Use audited financials
+- **Cross-Check**: Multiple data sources
+- **Currency**: Ensure all figures in same currency
+- **Consistency**: Fiscal year alignment
+
+### Assumption Setting
+- **Conservative Bias**: Better to under-promise
+- **Document Rationale**: Know why you chose each assumption
+- **Industry Context**: Compare with sector norms
+- **Management Track Record**: Historical guidance accuracy
+
+### Model Usage
+- **Regular Updates**: Refresh with new data
+- **Scenario Planning**: Multiple outcome scenarios
+- **Peer Comparison**: Benchmark against competitors
+- **Investment Thesis**: Align model with investment logic
+
+## 🚨 Common Mistakes
+
+### Input Errors
+- **Wrong Share Count**: Using authorized vs outstanding
+- **Mixed Currencies**: INR vs USD confusion
+- **Fiscal Year Mismatch**: Calendar vs fiscal year
+- **One-time Items**: Including non-recurring items
+
+### Assumption Problems
+- **Over-Optimism**: Using peak cycle assumptions
+- **Linear Thinking**: Assuming straight-line growth
+- **Ignoring Competition**: Not factoring competitive response
+- **Macro Blindness**: Ignoring economic cycles
+
+### Valuation Issues
+- **Multiple Expansion**: Assuming valuation re-rating
+- **Peak Multiples**: Using cycle-high comparisons
+- **Size Mismatch**: Comparing different company sizes
+- **Quality Adjustment**: Not adjusting for business quality
+
+## 🔧 Troubleshooting
+
+### Common Issues
+
+**"Unrealistic Results":**
+- Check input data accuracy
+- Verify assumption reasonableness
+- Compare with industry benchmarks
+- Reduce growth/margin assumptions
+
+**"Negative Values":**
+- Review margin trajectory settings
+- Check tax rate input
+- Verify EBITDA > EBIT relationship
+- Adjust working capital assumptions
+
+**"Extreme Valuations":**
+- Validate target multiples
+- Compare with peer valuations
+- Check for input errors
+- Consider market conditions
+
+### Getting Help
+
+- **GitHub Issues**: Report bugs or problems
+- **Documentation**: Check examples section
+- **Community**: Discuss with other users
+- **Updates**: Tool improvements released regularly
+
+## 📱 Mobile Usage
+
+The tool is fully responsive and works on mobile devices:
+
+**Mobile Optimizations:**
+- Touch-friendly inputs
+- Scrollable tables
+- Readable fonts
+- Simplified navigation
+
+**Tablet Usage:**
+- Split-screen friendly
+- Landscape orientation support
+- Enhanced readability
+
+## 🔄 Workflow Integration
+
+### Research Process
+1. **Screen Companies**: Identify candidates
+2. **Gather Data**: Collect financial information
+3. **Build Model**: Use this tool for projections
+4. **Validate Results**: Cross-check with research
+5. **Investment Decision**: Based on risk/return profile
+
+### Portfolio Management
+1. **Regular Updates**: Refresh models quarterly
+2. **Performance Tracking**: Compare actuals vs projections
+3. **Rebalancing Decisions**: Based on updated valuations
+4. **Risk Assessment**: Monitor assumption changes
+
+---
+
+**Next Steps:**
+- Try the [Example Analyses](examples.md) for hands-on learning
+- Join the community for tips and tricks
+- Bookmark the tool for regular use
+- Share feedback for improvements

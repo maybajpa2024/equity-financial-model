@@ -1,0 +1,381 @@
+# 📊 Example Analyses & Case Studies
+
+This document provides real-world examples of how to use the Equity Financial Model Tool across different investment scenarios.
+
+## 🏭 Case Study 1: APAR Industries (Growth Story)
+
+### Company Overview
+APAR Industries is a diversified electrical equipment manufacturer with three business segments: conductors, cables, and specialty oils.
+
+### Investment Thesis
+- Premium product premiumization strategy
+- Data center opportunities (Microsoft, Google partnerships)
+- US market recovery potential
+- Margin expansion through operational leverage
+
+### Model Inputs
+
+#### Base Data (FY25 Actuals)
+```
+Company Name: APAR Industries Limited
+Current Share Price: ₹6,500
+Shares Outstanding: 4.01 Cr
+FY25 Revenue: ₹18,581 Cr
+FY25 EBITDA: ₹1,679 Cr
+FY25 EBIT: ₹1,547 Cr
+FY25 PAT: ₹821 Cr
+FY25 EPS: ₹204.46
+```
+
+#### Growth Assumptions
+```
+FY26 Revenue Growth: 15%
+FY27 Revenue Growth: 19%
+FY28 Revenue Growth: 23%
+Margin Trajectory: Expanding
+Margin Change per Year: +0.4%
+Tax Rate: 26%
+```
+
+#### Valuation Parameters
+```
+Target P/E Multiple: 28x
+Target EV/EBITDA Multiple: 15x
+Net Debt: ₹650 Cr
+Valuation Year: FY27
+```
+
+### Rationale Behind Assumptions
+
+**Revenue Growth Rationale:**
+- **FY26 (15%)**: Conservative growth during CAPEX deployment phase
+- **FY27 (19%)**: New capacity coming online, US market recovery
+- **FY28 (23%)**: Full utilization of expanded capacity, premium product ramp
+
+**Margin Expansion Logic:**
+- **+0.4% annually**: Product premiumization (45% premium mix already)
+- Operational leverage from ₹1,300 Cr CAPEX investment
+- US business higher margins than domestic
+- Scale economies in new facilities
+
+**Valuation Multiple Justification:**
+- **28x P/E**: Premium to sector (22-25x) for technology leadership
+- **15x EV/EBITDA**: Reflects capital intensity but growth profile
+- Peer comparison: Polycab (12-15x), KEI (14-18x)
+- US exposure commands premium valuation
+
+### Expected Results
+
+**Financial Projections:**
+- **FY27 Revenue**: ~₹25,500 Cr
+- **FY27 EBITDA**: ~₹2,650 Cr (10.4% margin)
+- **FY27 EPS**: ~₹400
+
+**Exit Valuation:**
+- **P/E Target**: ₹11,200 (72% upside)
+- **EV/EBITDA Target**: ₹10,800 (66% upside)
+
+### Risk Factors
+- US tariff uncertainty
+- Chinese competition in export markets
+- CAPEX execution delays
+- Raw material cost inflation
+
+---
+
+## 🛒 Case Study 2: Avenue Supermarts (Value Investment)
+
+### Company Overview
+Avenue Supermarts operates D-Mart retail chain - India's leading value retail format.
+
+### Investment Thesis
+- Consistent same-store-sales growth
+- Store expansion in smaller cities
+- Supply chain advantages
+- Defensive business model
+
+### Model Inputs
+
+#### Base Data (FY25 Actuals)
+```
+Company Name: Avenue Supermarts Limited
+Current Share Price: ₹3,800
+Shares Outstanding: 6.5 Cr
+FY25 Revenue: ₹58,500 Cr
+FY25 EBITDA: ₹5,850 Cr
+FY25 EBIT: ₹4,680 Cr
+FY25 PAT: ₹3,510 Cr
+FY25 EPS: ₹540
+```
+
+#### Growth Assumptions
+```
+FY26 Revenue Growth: 18%
+FY27 Revenue Growth: 16%
+FY28 Revenue Growth: 14%
+Margin Trajectory: Stable
+Margin Change per Year: 0%
+Tax Rate: 25%
+```
+
+#### Valuation Parameters
+```
+Target P/E Multiple: 35x
+Target EV/EBITDA Multiple: 22x
+Net Debt: -₹2,500 Cr (net cash)
+Valuation Year: FY27
+```
+
+### Rationale Behind Assumptions
+
+**Decelerating Growth:**
+- Mature store base in metros
+- Smaller city expansion slower ramp
+- Market saturation in key regions
+- Competition from online/quick commerce
+
+**Stable Margins:**
+- Proven business model
+- Scale benefits offset inflation
+- Efficient operations
+- Consistent execution track record
+
+**Premium Valuation:**
+- Quality retail franchise
+- Predictable cash flows
+- Market leadership position
+- Strong balance sheet (net cash)
+
+### Expected Results
+
+**Financial Projections:**
+- **FY27 Revenue**: ~₹78,900 Cr
+- **FY27 EBITDA**: ~₹7,890 Cr (10.0% margin)
+- **FY27 EPS**: ~₹750
+
+**Exit Valuation:**
+- **P/E Target**: ₹26,250 (291% upside)
+- **EV/EBITDA Target**: ₹27,100 (313% upside)
+
+### Investment Considerations
+- High current valuation multiple
+- Long-term compounding story
+- Execution risk in new markets
+- E-commerce disruption potential
+
+---
+
+## 🏗️ Case Study 3: L&T (Cyclical Recovery)
+
+### Company Overview
+Larsen & Toubro - India's largest engineering & construction conglomerate.
+
+### Investment Thesis
+- Infrastructure capex cycle recovery
+- Order book visibility
+- Margin improvement post-COVID
+- Technology services growth
+
+### Model Inputs
+
+#### Base Data (FY25 Actuals)
+```
+Company Name: Larsen & Toubro Limited
+Current Share Price: ₹3,200
+Shares Outstanding: 140 Cr
+FY25 Revenue: ₹2,00,000 Cr
+FY25 EBITDA: ₹20,000 Cr
+FY25 EBIT: ₹16,000 Cr
+FY25 PAT: ₹11,200 Cr
+FY25 EPS: ₹80
+```
+
+#### Growth Assumptions
+```
+FY26 Revenue Growth: 12%
+FY27 Revenue Growth: 15%
+FY28 Revenue Growth: 18%
+Margin Trajectory: Expanding
+Margin Change per Year: +0.3%
+Tax Rate: 28%
+```
+
+#### Valuation Parameters
+```
+Target P/E Multiple: 20x
+Target EV/EBITDA Multiple: 12x
+Net Debt: ₹15,000 Cr
+Valuation Year: FY28
+```
+
+### Rationale Behind Assumptions
+
+**Accelerating Growth:**
+- Government infrastructure spending
+- Private capex revival
+- Defense order momentum
+- Technology services scaling
+
+**Margin Recovery:**
+- Project execution improvements
+- Cost optimization initiatives
+- Better project selection
+- Operational leverage
+
+**Conservative Valuation:**
+- Cyclical business nature
+- Execution risks in large projects
+- Working capital intensity
+- Economic sensitivity
+
+### Expected Results
+
+**Financial Projections:**
+- **FY28 Revenue**: ~₹3,07,000 Cr
+- **FY28 EBITDA**: ~₹33,800 Cr (11.0% margin)
+- **FY28 EPS**: ₹140
+
+**Exit Valuation:**
+- **P/E Target**: ₹2,800 (-12% downside - overvalued)
+- **EV/EBITDA Target**: ₹2,900 (-9% downside)
+
+### Key Insights
+- Model suggests current valuation is stretched
+- Need lower entry price for attractive returns
+- Margin expansion critical for returns
+- Cyclical timing important
+
+---
+
+## 💊 Case Study 4: Sun Pharma (Turnaround Story)
+
+### Company Overview
+Sun Pharmaceutical Industries - India's largest pharmaceutical company.
+
+### Investment Thesis
+- US FDA compliance improvements
+- Specialty drugs portfolio growth
+- Emerging markets expansion
+- Cost optimization benefits
+
+### Model Inputs
+
+#### Base Data (FY25 Actuals)
+```
+Company Name: Sun Pharmaceutical Industries
+Current Share Price: ₹1,650
+Shares Outstanding: 240 Cr
+FY25 Revenue: ₹42,000 Cr
+FY25 EBITDA: ₹10,500 Cr
+FY25 EBIT: ₹8,400 Cr
+FY25 PAT: ₹6,720 Cr
+FY25 EPS: ₹28
+```
+
+#### Growth Assumptions
+```
+FY26 Revenue Growth: 8%
+FY27 Revenue Growth: 12%
+FY28 Revenue Growth: 15%
+Margin Trajectory: Expanding
+Margin Change per Year: +0.5%
+Tax Rate: 22%
+```
+
+#### Valuation Parameters
+```
+Target P/E Multiple: 25x
+Target EV/EBITDA Multiple: 18x
+Net Debt: -₹8,000 Cr (net cash)
+Valuation Year: FY28
+```
+
+### Rationale Behind Assumptions
+
+**Improving Growth Trajectory:**
+- FDA compliance resolution
+- New product launches
+- Market share recovery
+- Specialty drugs scaling
+
+**Margin Expansion:**
+- Operational improvements
+- Product mix enhancement
+- Cost rationalization
+- R&D productivity gains
+
+**Re-rating Potential:**
+- Quality pharma franchise
+- Strong cash generation
+- Diversified portfolio
+- Emerging market exposure
+
+### Expected Results
+
+**Financial Projections:**
+- **FY28 Revenue**: ₹59,000 Cr
+- **FY28 EBITDA**: ₹16,900 Cr (28.6% margin)
+- **FY28 EPS**: ₹45
+
+**Exit Valuation:**
+- **P/E Target**: ₹1,125 (-32% downside - expensive)
+- **EV/EBITDA Target**: ₹1,270 (-23% downside)
+
+### Investment Conclusion
+- Current valuation appears full
+- Need significant margin expansion for returns
+- Turnaround story priced in
+- Wait for better entry point
+
+---
+
+## 🔬 Case Study 5: Biocon (High Growth Biotech)
+
+### Company Overview
+Biocon Limited - Leading biotechnology company specializing in biosimilars.
+
+### Investment Thesis
+- Biosimilar market expansion globally
+- US market approvals pipeline
+- Partnership with global pharma
+- Research capabilities advantage
+
+### Model Inputs
+
+#### Base Data (FY25 Actuals)
+```
+Company Name: Biocon Limited
+Current Share Price: ₹350
+Shares Outstanding: 120 Cr
+FY25 Revenue: ₹9,500 Cr
+FY25 EBITDA: ₹1,900 Cr
+FY25 EBIT: ₹1,140 Cr
+FY25 PAT: ₹600 Cr
+FY25 EPS: ₹5
+```
+
+#### Growth Assumptions
+```
+FY26 Revenue Growth: 25%
+FY27 Revenue Growth: 30%
+FY28 Revenue Growth: 35%
+Margin Trajectory: Expanding
+Margin Change per Year: +1.0%
+Tax Rate: 25%
+```
+
+#### Valuation Parameters
+```
+Target P/E Multiple: 45x
+Target EV/EBITDA Multiple: 25x
+Net Debt: ₹2,000 Cr
+Valuation Year: FY28
+```
+
+### Rationale Behind Assumptions
+
+**High Growth Expectations:**
+- Multiple product launches
+- Market penetration globally
+- Regulatory approvals
+- Partnership reve
